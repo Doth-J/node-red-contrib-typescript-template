@@ -1,0 +1,80 @@
+<!-- EXAMPLE NODE -->
+<script type="text/javascript" id="node-example">
+    RED.nodes.registerType('example',{
+        category:'ExamplePallet',
+        color:'#e2b784',
+        inputs:1,
+        outputs:1,   
+        icon:"node.svg", 
+        defaults: {
+            name: {value:''},
+            topic: {value:''}
+        },
+        label: function(){
+            return this.name || 'example'
+        }
+    });
+</script>
+<script type="text/html" data-template-name="example">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-topic"><i class="fa fa-cog"></i> Topic</label>
+        <input type="text" id="node-input-topic" placeholder="Topic" required>
+    </div>
+</script>
+<script type="text/html" data-help-name="example">
+    <p>Typescript example Node-RED node</p>
+    <h3>Inputs</h3>
+    <dl class="message-properties">
+    <dt>payload
+        <span class="property-type">string</span>
+    </dt>
+    <h3>Outputs</h3>
+    <dl class="message-properties">
+    <dt>payload
+        <span class="property-type">string</span>
+    </dt>
+    <h3>Details</h3>
+    <p>Some more information about the node.</p>
+</script>
+
+<!-- ANOTHER NODE -->
+<!-- <script type="text/javascript" id="node-another">
+    RED.nodes.registerType('another',{
+        category:'ExamplePallet',
+        color:'#e2b784',
+        inputs:1,
+        outputs:1,   
+        icon:"node.svg", 
+        defaults: {
+            name: {value:''}
+        },
+        label: function(){
+            return this.name || 'another'
+        }
+    });
+</script>
+<script type="text/html" data-template-name="another">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+<script type="text/html" data-help-name="another">
+    <p>Another typescript example Node-RED node</p>
+    <h3>Inputs</h3>
+    <dl class="message-properties">
+    <dt>payload
+        <span class="property-type">string</span>
+    </dt>
+    <h3>Outputs</h3>
+    <dl class="message-properties">
+    <dt>payload
+        <span class="property-type">string</span>
+    </dt>
+    <h3>Details</h3>
+    <p>Some more information about the node.</p>
+</script> -->
