@@ -69,7 +69,6 @@ export = function(RED:NodeRED.NodeAPI){
     .
 }
 ```
----
 ### Appearance :scarf:
 Go ahead and edit the contents of the [example](./build/node.html) file inside the `./build` folder. Also here is a reference to official documenation regarding the [HTML file](https://nodered.org/docs/creating-nodes/node-html).
 * Register your node's type and create it's [appereance](https://nodered.org/docs/creating-nodes/appearance):
