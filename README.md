@@ -1,5 +1,5 @@
 # node-red-contrib-typescript-template :package:
-This is a template project for creating your own Node-RED nodes. 
+This is a typescript template project for creating your own Node-RED nodes. 
 
 :icecream: **Example Node included!** :icecream:
 
