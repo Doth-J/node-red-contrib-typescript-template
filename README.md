@@ -61,7 +61,7 @@ interface ExampleNodeConfig extends NodeRED.NodeDef{
     topic:string
 }
 ```
-:warning: __You will need to create as many _*_NodeConfig interfaces as the nodes in the file!__
+:warning: __You will need to create as many NodeConfig interfaces as the nodes in the file!__
 #### Node Internal logic
 * To create the [node's logic](https://nodered.org/docs/creating-nodes/node-js) start by making a node function, inside this function create the actual node in the Node-RED nodes using the API and then develop the node's interal logic when it receives input message. Finally you will need to register the type of the node with Node-RED's API, following is a code snippet for an example node:
 ```typescript
