@@ -90,7 +90,7 @@ Go ahead and edit the contents of the [example](./nodes/node.html) file inside t
         // Your node's output intefaces' labels
         outputLabels: "a message with a topic",
         // Your node's icon
-        // Icons can be added in the ./nodes/icon folder in svg format
+        // Icons can be added in the `./nodes/icon` folder in svg format
         // These can be directly accessed by Node-RED with no relative path required   
         icon:"node.svg", 
         // Your node's properties:
