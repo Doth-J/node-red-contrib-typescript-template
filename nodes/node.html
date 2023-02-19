@@ -1,10 +1,12 @@
 <!-- EXAMPLE NODE -->
 <script type="text/javascript" id="node-example">
     RED.nodes.registerType('example',{
-        category:'ExamplePallet',
+        category:'exampleCategory',
         color:'#e2b784',
         inputs:1,
-        outputs:1,   
+        inputLabels: "maybe a message",
+        outputs:1,
+        outputLabels: "a message with a topic",
         icon:"node.svg", 
         defaults: {
             name: {value:''},
@@ -44,7 +46,7 @@
 <!-- ANOTHER NODE -->
 <!-- <script type="text/javascript" id="node-another">
     RED.nodes.registerType('another',{
-        category:'ExamplePallet',
+        category:'exampleCategory',
         color:'#e2b784',
         inputs:1,
         outputs:1,   
