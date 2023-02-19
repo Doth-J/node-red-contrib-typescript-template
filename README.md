@@ -97,7 +97,7 @@ Go ahead and edit the contents of the [example](./nodes/node.html) file inside t
         // These will be accessible and configurable from the edit dialog (Check next step)
         // These will need to match the configuration properties defined in your node' config interface
         // The `name`,`type`,`id` and `z` variables are created and required by Node-RED 
-        // ! DON'T use the properties above, unless you know what you're doing :) ! 
+        // !!! DON'T use the properties above, unless you know what you're doing :) !!! 
         defaults: {
             name: {value:''},
             topic: {value:''}
