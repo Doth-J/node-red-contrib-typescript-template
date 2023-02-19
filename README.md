@@ -1,16 +1,40 @@
 # node-red-contrib-typescript-template :package:
-This is a typescript template project for creating your own Node-RED nodes. 
+This is a typescript template project for developing Node-RED nodes. 
 
 ### **Example Node included!** :icecream:
 
 ## Install :zap:
-Follow these commands to set up your Typescript Node-RED node project:
+Follow these three steps to set up your Typescript Node-RED node project:
+* Clone this repository and create your project's directory, changing the `<PROJECT NAME>` field:
 ```console
 git clone https://github.com/Doth-J/node-red-contrib-typescript-template.git
-cd ./node-red-contrib-typescript-template
+mv node-red-contrib-typescript-template <PROJECT NAME>
+cd ./<PROJECT NAME>
+```
+* In the `package.json`, change the `<*>` fields below to your own:
+```json
+{
+  "name": "<PROJECT NAME>",
+  "version": "0.0.1",
+  "description": "Node-RED node for <DESCRIPTION>",
+  "author":"<AUTHOR>",
+  "keywords":[
+    "node-red",
+    "<KEYWORD-1>",
+    "<KEYWORD-2>",
+    .
+    "<KEYWORD-N>",
+  ]
+  .
+  .
+}
+```
+* Save your edited `package.json` and install the dependencies:
+```console
 npm install
 ```
-After that your are all set and ready to begin developing your own nodes.
+### Done! :tada:
+Your are all set and ready to begin developing your nodes.
 
 ## Building your Nodes :hammer:
 To build the nodes you have developed execute the following command:
@@ -18,9 +42,9 @@ To build the nodes you have developed execute the following command:
 npm run build
 ```
 ## Installing your Nodes :zap:
-Once you have build your nodes, _inside the `~/.node-red` directory_, execute the following command:
+Once you have build your nodes, _go inside the `~/.node-red` directory_ and execute the following command:
 ```console
-npm install ../path/to/project/
+npm install ../path/to/your/project/
 ```
 
 ## Creating your Nodes :gear:
@@ -33,6 +57,7 @@ Go ahead and edit the contents of the [example](./src/node.ts) file inside the `
 import * as NodeRED from "node-red";
 
 interface ExampleNodeConfig extends NodeRED.NodeDef{
+    // Add all your node properties 
     topic:string
 }
 ```
@@ -46,9 +71,9 @@ export = function(RED:NodeRED.NodeAPI){
     .
     // Example Node Function
     function ExampleNode(this:NodeRED.Node, config:ExampleNodeConfig){
-      // Create the actual node
+      // Create the actual node using the Node-RED API
       RED.nodes.createNode(this,config);
-      // Node input listener
+      // Node input listener, when node receives a msg
       this.on('input',(msg:any,send,done)=>{
           // This is where you set up your node's internal logic
           
@@ -62,7 +87,7 @@ export = function(RED:NodeRED.NodeAPI){
           if(done) done();
       });
     }
-    // Node is registered with the 'example' type
+    // Node is registered with the 'example' type using the Node-RED API
     RED.nodes.registerType('example',ExampleNode);
     .
     .
@@ -97,7 +122,7 @@ Go ahead and edit the contents of the [example](./nodes/node.html) file inside t
         // These will be accessible and configurable from the edit dialog (Check next step)
         // These will need to match the configuration properties defined in your node' config interface
         // The `name`,`type`,`id` and `z` variables are created and required by Node-RED 
-        // !!! DON'T use the properties above, unless you know what you're doing :) !!! 
+        // !!! DON'T use the default properties above, unless you know what you're doing! :)
         defaults: {
             name: {value:''},
             topic: {value:''}
@@ -112,17 +137,18 @@ Go ahead and edit the contents of the [example](./nodes/node.html) file inside t
 * Create the [edit dialog](https://nodered.org/docs/creating-nodes/edit-dialog) for your node's configuration:
 ```html
 <script type="text/html" data-template-name="example">
-    <!-- Your node's properties, defined in the `defaults` in the main script above, are made accessible in the edit dialog below -->
+<!-- The node's properties, defined in the `defaults` in the main script above.
+     These properties can be made accessible to the user in the edit dialog below -->
     <div class="form-row">
-        <!-- Label for the input of the property -->
+        <!-- Label of the node property -->
         <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
-        <!-- The id of the input tag for the property must match the `node-input-[property name]` pattern -->
+        <!-- The id for the property must match the `node-input-[property name]` pattern -->
         <input type="text" id="node-input-name" placeholder="Name">
     </div>
     <div class="form-row">
-        <!-- Label for the input of the property -->
+        <!-- Label of the node property -->
         <label for="node-input-topic"><i class="fa fa-cog"></i> Topic</label>
-        <!-- The id of the input tag for the property must match the `node-input-[property name]` pattern -->
+        <!-- The id for the property must match the `node-input-[property name]` pattern -->
         <input type="text" id="node-input-topic" placeholder="Topic" required>
     </div>
 </script>
@@ -130,7 +156,9 @@ Go ahead and edit the contents of the [example](./nodes/node.html) file inside t
 * Create the [help](https://nodered.org/docs/creating-nodes/help-style-guide) dialog and your node's documentation: 
 ```html
 <script type="text/html" data-help-name="example">
-  <!-- Your node's help dialog when hovering over the pallet or opening the documenation tab -->
+<!-- Your node's help dialog appereance
+     The info below is shown when hovering over the pallet 
+     or opening the documenation tab -->
   <p>Typescript example Node-RED node</p>
   <!-- Documentation for your node's inputs -->
   <h3>Inputs</h3>
@@ -149,8 +177,9 @@ Go ahead and edit the contents of the [example](./nodes/node.html) file inside t
   <p>Some more information about the node.</p>
 </script>
 ```
-## Full Example Node :tada:
-> [`node.ts`](./src/node.ts)
+## Full Example Node :icecream:
+> Node Logic
+[`node.ts`](./src/node.ts)
 ```typescript
 import * as NodeRED from "node-red";
 
@@ -173,7 +202,8 @@ export = function(RED:NodeRED.NodeAPI){
     RED.nodes.registerType('example',ExampleNode);
 }
 ```
->[`node.html`](./nodes/node.html) 
+>Node Appearance
+[`node.html`](./nodes/node.html) 
 ```html
 <script type="text/javascript" id="node-example">
     RED.nodes.registerType('example',{
