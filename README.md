@@ -31,17 +31,6 @@ npm install
 ### Well Done! :tada:
 Your are all set and ready to begin developing your nodes.
 
-## Building your Nodes :hammer:
-To build the nodes you have developed execute the following command:
-```console
-npm run build
-```
-## Installing your Nodes :arrow_down_small:
-Once you have build your nodes, _go inside the `~/.node-red` directory_ and execute the following command:
-```console
-npm install ../path/to/project/node-red-contrib-<PROJECT NAME>
-```
-
 ## Creating your Nodes :gear:
 The template provides you with a basic Node-RED node typescript project structure. Check below to see how to set up your node types and appereance on the pallet.
 ### Node Logic :link:
@@ -57,8 +46,8 @@ interface ExampleNodeConfig extends NodeRED.NodeDef{
 }
 ```
 :warning: __You will need to create as many NodeConfig interfaces as the nodes in the file!__
-#### Node Internal logic
-* To create the [node's logic](https://nodered.org/docs/creating-nodes/node-js) start by making a node function, inside this function create the actual node in the Node-RED nodes using the API and then develop the node's interal logic when it receives input message. Finally you will need to register the type of the node with Node-RED's API, following is a code snippet for an example node:
+#### Internal logic
+* To create the [node's logic](https://nodered.org/docs/creating-nodes/node-js), start by making a node function, inside this function create the actual node in the Node-RED nodes using the API and then develop the node's interal logic when it receives input message. Finally you will need to register the type of the node with Node-RED's API, following is a code snippet for an example node:
 ```typescript
 export = function(RED:NodeRED.NodeAPI){
 
@@ -167,6 +156,16 @@ Go ahead and edit the contents of the [example](./nodes/node.html) file inside t
   <h3>Details</h3>
   <p>Some more information about the node.</p>
 </script>
+```
+## Building your Nodes :hammer:
+To build the nodes you have developed execute the following command:
+```console
+npm run build
+```
+## Installing your Nodes :arrow_down_small:
+Once you have build your nodes, _go inside the `~/.node-red` directory_ and execute the following command:
+```console
+npm install ../path/to/project/node-red-contrib-<PROJECT NAME>
 ```
 ## Full Example Node :icecream:
 ### Node Logic :link:
