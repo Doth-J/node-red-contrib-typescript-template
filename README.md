@@ -3,7 +3,7 @@ This is a typescript template project for developing Node-RED nodes.
 
 ### **Example Node included!** :icecream:
 
-## Setup :zap:
+## Project Setup :zap:
 Follow these steps to set up your Typescript Node-RED node project:
 1. Clone this repository and create your project's directory, changing the `<PROJECT NAME>` field:
 ```console
