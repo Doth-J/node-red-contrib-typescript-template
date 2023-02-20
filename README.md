@@ -34,7 +34,7 @@ Your are all set and ready to begin developing your nodes.
 ## Creating your Nodes :gear:
 The template provides you with a basic Node-RED node typescript project structure. Check below to see how to set up your node types and appereance on the pallet.
 ### Node Logic :link:
-Go ahead and edit the contents of the [example](./src/node.ts) file inside the `./src` folder:
+##### Go ahead and edit the contents of the [example](./src/node.ts) file inside the `./src` folder:
 #### Configuration Interfaces
 * Import the Node-RED module and setup the [properties](https://nodered.org/docs/creating-nodes/properties) of your node. Inside the config interface add all the properties your node will have, the NodeDef already contains properties for ``id``,``name``,``type`` and ``z``. These properties will be accessible anc configurable in the node's appereance part. The configuration interfaces can be created as follows:
 ```typescript
@@ -47,7 +47,7 @@ interface ExampleNodeConfig extends NodeRED.NodeDef{
 ```
 :warning: __You will need to create as many NodeConfig interfaces as the nodes in the file!__
 #### Internal logic
-* To create the [node's logic](https://nodered.org/docs/creating-nodes/node-js), start by making a node function, inside this function create the actual node in the Node-RED nodes using the API and then develop the node's interal logic when it receives input message. Finally you will need to register the type of the node with Node-RED's API, following is a code snippet for an example node:
+* To create the [node's logic](https://nodered.org/docs/creating-nodes/node-js), start by making a node function, inside this function create the actual node in the Node-RED nodes using the API and then develop the node's interal logic when it receives an input message. Finally you will need to register the type of the node with Node-RED's API, following is a code snippet for the example node:
 ```typescript
 export = function(RED:NodeRED.NodeAPI){
 
@@ -75,7 +75,8 @@ export = function(RED:NodeRED.NodeAPI){
 }
 ```
 ### Node Appearance :scarf:
-Go ahead and edit the contents of the [example](./nodes/node.html) file inside the `./nodes` folder. Here is a reference to official documenation regarding the [HTML file](https://nodered.org/docs/creating-nodes/node-html). The node appereance defines how your node is shown in the pallet, it's UI behavior and what properties will be accessible for configuration. To begin making your node's appereance follow these steps:
+##### Go ahead and edit the contents of the [example](./nodes/node.html) file inside the `./nodes` folder.
+Here is a reference to official documenation regarding the [HTML file](https://nodered.org/docs/creating-nodes/node-html). The node appereance defines how your node is shown in the pallet, it's UI behavior and what properties will be accessible for configuration. To begin making your node's appereance follow these steps:
 
 * Register your node's type and creating the node's main [appereance](https://nodered.org/docs/creating-nodes/appearance) `<script>` tag:
 ```html
