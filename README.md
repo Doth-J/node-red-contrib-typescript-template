@@ -262,4 +262,4 @@ export = function(RED:NodeRED.NodeAPI){
 
     ![Example Node Message Result 2](./docs/ExampleResult-2.PNG)
 
-## Have fun developing your nodes! :star:
+### Have fun developing your nodes! :star:
