@@ -11,29 +11,24 @@ git clone https://github.com/Doth-J/node-red-contrib-typescript-template.git
 mv node-red-contrib-typescript-template node-red-contrib-<PROJECT NAME>
 cd ./node-red-contrib-<PROJECT NAME>
 ```
-2. In the `package.json`, change the `<*>` fields below to your own:
+2. Edit the `package.json`, change ONLY the `<*>` fields shown below:
 ```json
 {
   "name": "node-red-contrib-<PROJECT NAME>",
-  "version": "0.0.1",
   "description": "Node-RED node for <DESCRIPTION>",
   "author":"<AUTHOR>",
-  "keywords":[
+  "keywords": [
     "node-red",
     "<KEYWORD-1>",
-    "<KEYWORD-2>",
-    .
-    "<KEYWORD-N>",
+    "<KEYWORD-2>"
   ]
-  .
-  .
 }
 ```
 3. Save your edited `package.json` and install the dependencies:
 ```console
 npm install
 ```
-4. ### Done! :tada:
+### Done! :tada:
 Your are all set and ready to begin developing your nodes.
 
 ## Building your Nodes :hammer:

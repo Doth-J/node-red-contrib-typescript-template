@@ -2,7 +2,6 @@
   "name": "node-red-contrib-typescript-template",
   "version": "0.0.1",
   "description": "Node-RED typescript template for creating nodes",
-  "main": "index.js",
   "devDependencies": {
     "@types/node": "^18.14.0",
     "@types/node-red": "^1.2.1",
