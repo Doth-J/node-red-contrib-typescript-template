@@ -250,7 +250,7 @@ export = function(RED:NodeRED.NodeAPI){
 
     ![Example Node Configuration](./docs/ExampleConfig.PNG)
 
-* Clicking on the injector node with an empty `msg.payload`, we get:
+* Clicking the injector node with an **empty** `msg.payload`, we get:
 
     ![Example Node Message Result 1](./docs/ExampleResult1.PNG)
 
@@ -258,7 +258,7 @@ export = function(RED:NodeRED.NodeAPI){
 
     ![Injector Node Configuration](./docs/ExampleInjectorConfig.PNG)
 
-* Clicking on the injector node with a message in the `msg.payload.message`, we get:
+* Clicking the injector node with a message in the `msg.payload.message`, we get:
 
     ![Example Node Message Result 2](./docs/ExampleResult2.PNG)
 
