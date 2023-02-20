@@ -245,8 +245,13 @@ export = function(RED:NodeRED.NodeAPI){
 </script>
 ```
 ### Example Node in Node-RED
-* ![Example Node in Node-RED](./docs/ExampleNode.PNG)
-* ![Example Node Configuration](./docs/ExampleConfig.PNG)
-* ![Example Node Message Result 1](./docs/ExampleResult1.PNG)
-* ![Injector Node Configuration](./docs/ExampleInjectorConfig.PNG)
-* ![Example Node Message Result 2](./docs/ExampleResult2.PNG)
+* Once the example node is [installed in Node-RED](#installing-your-nodes-arrow_down_small), we can find it under the category `exampleCategory` defined by the node's appearance attributes. Let's make a simple flow for our new node:
+![Example Node in Node-RED](./docs/ExampleNode.PNG)
+*  Double-click on the example node and add a `Topic` to our example node: 
+![Example Node Configuration](./docs/ExampleConfig.PNG)
+* Clicking on the injector node with an empty `msg.payload`, we get:
+![Example Node Message Result 1](./docs/ExampleResult1.PNG)
+* Let's change the `msg.payload.message` variable of the injector node: 
+![Injector Node Configuration](./docs/ExampleInjectorConfig.PNG)
+* Clicking on the injector node with a message in the `msg.payload.message`, we get:
+![Example Node Message Result 2](./docs/ExampleResult2.PNG)
