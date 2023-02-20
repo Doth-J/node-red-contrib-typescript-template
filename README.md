@@ -47,12 +47,12 @@ The template provides you with a basic Node-RED node typescript project structur
 ### Node Logic :link:
 Go ahead and edit the contents of the [example](./src/node.ts) file inside the `./src` folder:
 #### Configuration Interfaces
-* Import the Node-RED module and setup the [properties](https://nodered.org/docs/creating-nodes/properties) of your node. Inside the config interface add all the properties your node will have, the NodeDef already contains properties for ``id``,``name,``,``type`` and ``z``. These properties will be accessible anc configurable in the node's appereance part. The configuration interfaces can be created as follows:
+* Import the Node-RED module and setup the [properties](https://nodered.org/docs/creating-nodes/properties) of your node. Inside the config interface add all the properties your node will have, the NodeDef already contains properties for ``id``,``name``,``type`` and ``z``. These properties will be accessible anc configurable in the node's appereance part. The configuration interfaces can be created as follows:
 ```typescript
 import * as NodeRED from "node-red";
 
 interface ExampleNodeConfig extends NodeRED.NodeDef{
-    // Add all your node properties 
+    // Add all your node properties here
     topic:string
 }
 ```
@@ -61,9 +61,7 @@ interface ExampleNodeConfig extends NodeRED.NodeDef{
 * To create the [node's logic](https://nodered.org/docs/creating-nodes/node-js) start by making a node function, inside this function create the actual node in the Node-RED nodes using the API and then develop the node's interal logic when it receives input message. Finally you will need to register the type of the node with Node-RED's API, following is a code snippet for an example node:
 ```typescript
 export = function(RED:NodeRED.NodeAPI){
-    .
-    .
-    .
+
     // Example Node Function
     function ExampleNode(this:NodeRED.Node, config:ExampleNodeConfig){
       // Create the actual node using the Node-RED API
@@ -84,9 +82,7 @@ export = function(RED:NodeRED.NodeAPI){
     }
     // Node is registered with the 'example' type using the Node-RED API
     RED.nodes.registerType('example',ExampleNode);
-    .
-    .
-    .
+
 }
 ```
 ### Node Appearance :scarf:
@@ -173,8 +169,8 @@ Go ahead and edit the contents of the [example](./nodes/node.html) file inside t
 </script>
 ```
 ## Full Example Node :icecream:
-### Node Logic
-[`node.ts`](./src/node.ts)
+### Node Logic :link:
+* [`node.ts`](./src/node.ts)
 ```typescript
 import * as NodeRED from "node-red";
 
@@ -197,8 +193,8 @@ export = function(RED:NodeRED.NodeAPI){
     RED.nodes.registerType('example',ExampleNode);
 }
 ```
-### Node Appearance
-[`node.html`](./nodes/node.html) 
+### Node Appearance :scarf:
+* [`node.html`](./nodes/node.html) 
 ```html
 <script type="text/javascript" id="node-example">
     RED.nodes.registerType('example',{
@@ -258,7 +254,7 @@ export = function(RED:NodeRED.NodeAPI){
 
     ![Example Node Message Result 1](./docs/ExampleResult-1.PNG)
 
-* Let's change the `msg.payload.message` variable of the injector node: 
+* Double-click on the injector node and add the `msg.payload.message` variable of the injector node: 
 
     ![Injector Node Configuration](./docs/ExampleInjectorConfig.PNG)
 
