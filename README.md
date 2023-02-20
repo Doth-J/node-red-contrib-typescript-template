@@ -256,7 +256,7 @@ export = function(RED:NodeRED.NodeAPI){
 
 * Clicking on the injector node with an empty `msg.payload`, we get:
 
-    ![Example Node Message Result 1](./docs/ExampleResult1.PNG)
+    ![Example Node Message Result 1](./docs/ExampleResult-1.PNG)
 
 * Let's change the `msg.payload.message` variable of the injector node: 
 
@@ -264,4 +264,4 @@ export = function(RED:NodeRED.NodeAPI){
 
 * Clicking on the injector node with a message in the `msg.payload.message`, we get:
 
-    ![Example Node Message Result 2](./docs/ExampleResult2.PNG)
+    ![Example Node Message Result 2](./docs/ExampleResult-2.PNG)
