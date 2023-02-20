@@ -36,7 +36,7 @@ To build the nodes you have developed execute the following command:
 ```console
 npm run build
 ```
-## Installing your Nodes :zap:
+## Installing your Nodes :arrow_down_small:
 Once you have build your nodes, _go inside the `~/.node-red` directory_ and execute the following command:
 ```console
 npm install ../path/to/project/node-red-contrib-<PROJECT NAME>
