@@ -261,3 +261,5 @@ export = function(RED:NodeRED.NodeAPI){
 * Clicking on the injector node with a message in the `msg.payload.message`, we get:
 
     ![Example Node Message Result 2](./docs/ExampleResult-2.PNG)
+
+### Have fun developing your nodes :star:
