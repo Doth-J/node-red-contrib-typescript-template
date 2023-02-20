@@ -240,6 +240,11 @@ export = function(RED:NodeRED.NodeAPI){
 </script>
 ```
 ---
+### Node Installation :arrow_double_down:
+Create the example node JS files using the `build` script of the project and install it in the `.node-red` directory:
+
+![Example Node Installation](./docs/ExampleNodeInstallation.PNG)
+---
 ### Example Node in Node-RED :ice_cream:
 * Once the example node is [installed in Node-RED](#installing-your-nodes-arrow_down_small), we can find it under the category `exampleCategory` defined by the node's appearance attributes. Let's make a simple flow for our new node:
 
