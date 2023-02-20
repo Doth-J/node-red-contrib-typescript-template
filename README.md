@@ -244,7 +244,7 @@ export = function(RED:NodeRED.NodeAPI){
     <p>Some more information about the node.</p>
 </script>
 ```
-### Example Node in Node-RED
+### Example Node in Node-RED :ice_cream:
 * Once the example node is [installed in Node-RED](#installing-your-nodes-arrow_down_small), we can find it under the category `exampleCategory` defined by the node's appearance attributes. Let's make a simple flow for our new node:
 ![Example Node in Node-RED](./docs/ExampleNode.PNG)
 *  Double-click on the example node and add a `Topic` to our example node: 
