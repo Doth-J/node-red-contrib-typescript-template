@@ -242,7 +242,7 @@ export = function(RED:NodeRED.NodeAPI){
 ```
 ---
 ### Example Node Build & Install :construction_worker:
-* Build the example node using the `build` script of the project and install it in the `.node-red` directory:
+    Build the example node using the `build` script of the project and install it in the `.node-red` directory:
     
     ![Example Node Installation](./docs/ExampleNodeInstall.PNG)
 ---
