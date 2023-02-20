@@ -4,17 +4,17 @@ This is a typescript template project for developing Node-RED nodes.
 ### **Example Node included!** :icecream:
 
 ## Install :zap:
-Follow these three steps to set up your Typescript Node-RED node project:
-* Clone this repository and create your project's directory, changing the `<PROJECT NAME>` field:
+Follow these steps to set up your Typescript Node-RED node project:
+1. Clone this repository and create your project's directory, changing the `<PROJECT NAME>` field:
 ```console
 git clone https://github.com/Doth-J/node-red-contrib-typescript-template.git
-mv node-red-contrib-typescript-template <PROJECT NAME>
-cd ./<PROJECT NAME>
+mv node-red-contrib-typescript-template node-red-contrib-<PROJECT NAME>
+cd ./node-red-contrib-<PROJECT NAME>
 ```
-* In the `package.json`, change the `<*>` fields below to your own:
+2. In the `package.json`, change the `<*>` fields below to your own:
 ```json
 {
-  "name": "<PROJECT NAME>",
+  "name": "node-red-contrib-<PROJECT NAME>",
   "version": "0.0.1",
   "description": "Node-RED node for <DESCRIPTION>",
   "author":"<AUTHOR>",
@@ -29,11 +29,11 @@ cd ./<PROJECT NAME>
   .
 }
 ```
-* Save your edited `package.json` and install the dependencies:
+3. Save your edited `package.json` and install the dependencies:
 ```console
 npm install
 ```
-### Done! :tada:
+4. ### Done! :tada:
 Your are all set and ready to begin developing your nodes.
 
 ## Building your Nodes :hammer:
@@ -44,7 +44,7 @@ npm run build
 ## Installing your Nodes :zap:
 Once you have build your nodes, _go inside the `~/.node-red` directory_ and execute the following command:
 ```console
-npm install ../path/to/your/project/
+npm install ../path/to/project/node-red-contrib-<PROJECT NAME>
 ```
 
 ## Creating your Nodes :gear:
@@ -178,7 +178,7 @@ Go ahead and edit the contents of the [example](./nodes/node.html) file inside t
 </script>
 ```
 ## Full Example Node :icecream:
-> Node Logic
+### Node Logic
 [`node.ts`](./src/node.ts)
 ```typescript
 import * as NodeRED from "node-red";
@@ -202,7 +202,7 @@ export = function(RED:NodeRED.NodeAPI){
     RED.nodes.registerType('example',ExampleNode);
 }
 ```
->Node Appearance
+### Node Appearance
 [`node.html`](./nodes/node.html) 
 ```html
 <script type="text/javascript" id="node-example">
@@ -249,3 +249,9 @@ export = function(RED:NodeRED.NodeAPI){
     <p>Some more information about the node.</p>
 </script>
 ```
+### Example Node in Node-RED
+* ![Example Node in Node-RED](./docs/ExampleNode.PNG)
+* ![Example Node Configuration](./docs/ExampleConfig.PNG)
+* ![Example Node Message Result 1](./docs/ExampleResult1.PNG)
+* ![Injector Node Configuration](./docs/ExampleInjectorConfig.PNG)
+* ![Example Node Message Result 2](./docs/ExampleResult2.PNG)
