@@ -168,7 +168,7 @@ Once you have build your nodes, _go inside the `~/.node-red` directory_ and exec
 npm install ../path/to/project/node-red-contrib-<PROJECT NAME>
 ```
 ## Full Example Node :icecream:
-### Node Logic :link:
+### Example Node Logic :link:
 * [`node.ts`](./src/node.ts)
 ```typescript
 import * as NodeRED from "node-red";
@@ -192,7 +192,7 @@ export = function(RED:NodeRED.NodeAPI){
     RED.nodes.registerType('example',ExampleNode);
 }
 ```
-### Node Appearance :scarf:
+### Example Node Appearance :scarf:
 * [`node.html`](./nodes/node.html) 
 ```html
 <script type="text/javascript" id="node-example">
@@ -240,7 +240,7 @@ export = function(RED:NodeRED.NodeAPI){
 </script>
 ```
 ---
-### Node Installation :arrow_double_down:
+### Example Node Installation :arrow_double_down:
 Create the example node JS files using the `build` script of the project and install it in the `.node-red` directory:
 
 ![Example Node Installation](./docs/ExampleNodeInstallation.PNG)
