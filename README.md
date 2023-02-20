@@ -129,7 +129,7 @@ Go ahead and edit the contents of the [example](./nodes/node.html) file inside t
 ```html
 <script type="text/html" data-template-name="example">
 <!-- The node's properties, defined in the `defaults` in the main script above.
-     These properties can be made accessible to the user in the edit dialog below -->
+     These properties can be made accessible to the user in the edit dialog below. -->
     <div class="form-row">
         <!-- Label of the node property -->
         <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
@@ -147,9 +147,9 @@ Go ahead and edit the contents of the [example](./nodes/node.html) file inside t
 * Create the [help](https://nodered.org/docs/creating-nodes/help-style-guide) dialog and your node's documentation: 
 ```html
 <script type="text/html" data-help-name="example">
-<!-- Your node's help dialog appereance
-     The info below is shown when hovering over the pallet 
-     or opening the documenation tab -->
+<!-- The node's help dialog appereance.
+     The info below is shown when hovering over 
+     the pallet or opening the documenation tab. -->
   <p>Typescript example Node-RED node</p>
   <!-- Documentation for your node's inputs -->
   <h3>Inputs</h3>
