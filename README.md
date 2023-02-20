@@ -78,7 +78,7 @@ export = function(RED:NodeRED.NodeAPI){
 ##### Go ahead and edit the contents of the [example](./nodes/node.html) file inside the `./nodes` folder.
 Here is a reference to official documenation regarding the [HTML file](https://nodered.org/docs/creating-nodes/node-html). The node appereance defines how your node is shown in the pallet, it's UI behavior and what properties will be accessible for configuration. To begin making your node's appereance follow these steps:
 
-* Register your node's type and creating the node's main [appereance](https://nodered.org/docs/creating-nodes/appearance) `<script>` tag:
+* Register your node's type, creating the node's main [appereance](https://nodered.org/docs/creating-nodes/appearance) in a `<script>` tag:
 ```html
 <script type="text/javascript" id="node-example">
     // The type here must match the type register in your node's logic
