@@ -253,19 +253,19 @@ export = function(RED:NodeRED.NodeAPI){
 
     ![Example Node in Node-RED](./docs/ExampleNode.PNG)
 
-*  Double-click on the example node and add a `Topic` to our example node: 
+*  Double-click on the example node and add a `Topic`: 
 
     ![Example Node Configuration](./docs/ExampleConfig.PNG)
 
-* Clicking the injector node with an **empty** `msg.payload`, we get:
+* Clicking the injector node:
 
     ![Example Node Message Result 1](./docs/ExampleResult1.PNG)
 
-* Double-click on the injector node and add the `msg.payload.message` variable of the injector node: 
+* Double-click on the injector node and add a `msg.payload.message` variable: 
 
     ![Injector Node Configuration](./docs/ExampleInjectorConfig.PNG)
 
-* Clicking the injector node with a message in the `msg.payload.message`, we get:
+* Clicking the injector node with a **message** in the `msg.payload.message`:
 
     ![Example Node Message Result 2](./docs/ExampleResult2.PNG)
 
