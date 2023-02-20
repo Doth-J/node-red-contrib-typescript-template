@@ -1,6 +1,6 @@
 # node-red-contrib-typescript-template :package:
-<div style="display: flex; align-items: center;">
-  <img height="20px" src="https://nodered.org/about/resources/media/node-red-hexagon.png"> This is a Typescript template project for developing Node-RED nodes.
+<div style="display: flex; align-items: center;height:20px; line-height:20px;">
+   This is a Typescript template project for developing Node-RED nodes. <img height="20px" src="https://nodered.org/about/resources/media/node-red-hexagon.png">
 </div>
 
 ### **Example Node included!** :icecream:
