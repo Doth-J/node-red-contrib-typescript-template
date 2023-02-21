@@ -11,7 +11,6 @@ Follow these steps to set up your Typescript Node-RED node project:
 ```console
 git clone https://github.com/Doth-J/node-red-contrib-typescript-template.git
 mv node-red-contrib-typescript-template node-red-contrib-<PROJECT NAME>
-cd ./node-red-contrib-<PROJECT NAME>
 ```
 2. Edit the `package.json`, change **only** the `<*>` fields shown below:
 ```json
@@ -28,6 +27,7 @@ cd ./node-red-contrib-<PROJECT NAME>
 ```
 3. Save your edited `package.json` and install the dependencies:
 ```console
+cd ./node-red-contrib-<PROJECT NAME>
 npm install
 ```
 ### Well Done! :tada:
